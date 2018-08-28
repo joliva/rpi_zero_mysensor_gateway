@@ -3,10 +3,10 @@ https://www.thingiverse.com/thing:XXXXXXX
 # Summary
 Raspberry Pi Zero W based MySensor controller/gateway with Long Range NRF24L01 + PA + LNA RF Transceiver.
 
-![alt text](https://github.com/joliva/rpi_zero_mysensor_gateway/rpi_zero_gateway.jpg"rPI Zero MySensor Gateway/Controller")
+![](https://github.com/joliva/rpi_zero_mysensor_gateway/blob/master/rpi_zero_gateway.jpg)
 
 # Attribution
-Based off Jumbospot / Zumspot Raspberry Pi Zero Wireless Case by Plankto
+Based off Jumbospot / Zumspot Raspberry Pi Zero Wireless Case by Plankto. https://www.thingiverse.com/thing:2773755
 
 # Usage
 Created with OpenSCAD 
