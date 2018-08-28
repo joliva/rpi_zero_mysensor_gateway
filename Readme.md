@@ -1,4 +1,4 @@
-https://www.thingiverse.com/thing:XXXXXXX
+More details: https://www.thingiverse.com/thing:3072244
 
 # Summary
 Raspberry Pi Zero W based MySensor controller/gateway with Long Range NRF24L01 + PA + LNA RF Transceiver.
@@ -15,7 +15,7 @@ Created with OpenSCAD
 3. Attach Long Range NRF24L01 + PA + LNA RF Transceiver to the insert (e.g. super glue)
 4. Wire the radio (NRF24L01) to the rPI zero header
 5. Press the insert onto the rPI zero
-6. Install M3x25 screws through bottom, insert and into the top
+6. Install M3x25 screws through bottom, insert, and finally into the top
 
 # Print Settings
 
