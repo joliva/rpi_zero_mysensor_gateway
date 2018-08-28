@@ -1,10 +1,10 @@
 /* 
-*  Open SCAD Name.: rpi_zero_mysensor_controller_case.scad
+*  Open SCAD Name.: rpi_zero_mysensor_gateway.scad
 *  Copyright (c)..: 2018 John Oliva
 *
 *  Creation Date..: 08/20/2018
 *  Last Modified..: 08/24/2018
-*  Description....: Contact sensor housing
+*  Description....: Raspberry Pi Zero gateway/controller housing in OpenSCAD.
 *  Version........: 1.0
 *
 *  Built On: Open SCAD version 2018.03.17
