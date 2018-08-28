@@ -16,6 +16,8 @@ Created with OpenSCAD
 4. Wire the radio (NRF24L01) to the rPI zero header
 5. Press the insert onto the rPI zero
 6. Install M3x25 screws through bottom, insert, and finally into the top
+7. Configure MySensor gateway according to: https://www.mysensors.org/build/raspberry
+8. Optional: Add controller code to rPI according to: https://www.mysensors.org/controller
 
 # Print Settings
 
