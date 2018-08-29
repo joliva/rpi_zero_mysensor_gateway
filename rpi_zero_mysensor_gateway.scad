@@ -3,9 +3,9 @@
 *  Copyright (c)..: 2018 John Oliva
 *
 *  Creation Date..: 08/20/2018
-*  Last Modified..: 08/24/2018
+*  Last Modified..: 08/29/2018
 *  Description....: Raspberry Pi Zero gateway/controller housing in OpenSCAD.
-*  Version........: 1.0
+*  Version........: 1.1
 *
 *  Built On: Open SCAD version 2018.03.17
 *
@@ -179,8 +179,16 @@ module bottom(){
 
 module top(){
     W = WIDTH_ADJ - 5.5;
-
     H_POST = 13;
+
+    // Chamfer to make stronger
+    module chamfer_post() {
+        cylinder(r=OPOST_RAD, h=H_POST, $fn=FN_LOW);
+        difference() {
+            rotate_extrude($fn=FN_LOW) translate([OPOST_RAD-.1,0,0]) polygon([[0,0],[3,0],[0,4]]);
+            translate([0,-6-OPOST_RAD/2,0]) cube([20,5,5], center=true);
+        }
+    }
 
     difference() {
         union() {
@@ -192,11 +200,11 @@ module top(){
                translate([WALL,WALL,WALL])cube([LENGTH-2*WALL,WIDTH_ADJ-2*WALL,TOP_HEIGHT]);
             }
 
-            //mounting posts
-            translate([5.5+PI_TOL_X,5.5,0])cylinder(r=OPOST_RAD, h=H_POST, $fn=FN_LOW);
-            translate([63.5+PI_TOL_X,5.5,0])cylinder(r=OPOST_RAD, h=H_POST, $fn=FN_LOW);
-            translate([5.5+PI_TOL_X,W-PI_TOL_Y,0])cylinder(r=OPOST_RAD, h=H_POST, $fn=FN_LOW);
-            translate([63.5+PI_TOL_X,W-PI_TOL_Y,0])cylinder(r=OPOST_RAD, h=H_POST, $fn=FN_LOW);
+            // chamfered mounting posts
+            translate([5.5+PI_TOL_X,5.5,0]) chamfer_post();
+            translate([63.5+PI_TOL_X,5.5,0]) chamfer_post();
+            translate([5.5+PI_TOL_X,W-PI_TOL_Y,0]) chamfer_post();
+            translate([63.5+PI_TOL_X,W-PI_TOL_Y,0]) chamfer_post();
         }
     
         union() {
@@ -322,3 +330,4 @@ module fillet(r, h) {
 
         }
 }
+
